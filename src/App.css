@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* body  */
+body {
+  background-color: #141c27;
+
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #6e6e6e;
+}
+
+a.active {
+  color: #ec4899;
+  font-size: 1.5rem;
+  font-weight: 500;
+  /* transition: 0.2s; */
+}
+
+.active-page {
+  background-color: #111827 !important;
+  color: #ec4899 !important;
+  /* border-left: 2px solid #ec4899 !important; */
+  border-color: #ec4899 !important;
+  font-weight: 500 !important;
+  /* #f989c1 */
+  /* background-color:  #fc6fb5; */
+}
+
+
+
+/* my own classess  */
+/* animation  */
+
+/* left loop move  */
+@keyframes animeLeftLoop {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-30%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* class */
+.animation-left-loop {
+  animation: animeLeftLoop 1s infinite ease-in-out;
+}
+
+/* on hover  */
+.hover-animation-left-loop:hover {
+  animation: animeLeftLoop 1s infinite ease-in-out;
+}
+
+
+
+/* slow shake  */
+@keyframes animeSlowShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* class */
+.animation-slow-shake {
+  animation: animeSlowShake 1s infinite ease-in-out;
+}
+
+/* on hover  */
+.hover-animation-slow-shake:hover {
+  animation: animeSlowShake 1s infinite ease-in-out;
+}
