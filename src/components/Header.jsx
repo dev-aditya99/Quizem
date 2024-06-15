@@ -283,7 +283,10 @@ function SideBar({
           {/* App Name and Logo  */}
           <div className="w-full py-5">
             <div className=" mx-2 bg-gray-700 p-2 rounded-full text-pink-500 font-bold flex items-center justify-center">
-              <img src="src\assets\favicons\favicon-32x32.png" alt="404" />
+              <img
+                src="https://github.com/dev-aditya99/Quizem/blob/main/src/assets/favicons/favicon-32x32.png?raw=true"
+                alt="404"
+              />
               Quizem
             </div>
           </div>

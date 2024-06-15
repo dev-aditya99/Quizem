@@ -591,7 +591,7 @@ function Admin() {
             {/* illustration image div  */}
             <div className="sm:block hidden w-full h-full absolute top-0 z-[-1] brightness-[0.5]">
               <img
-                src="src\assets\svgs\undraw_mobile_login_re_9ntv.svg"
+                src="https://raw.githubusercontent.com/dev-aditya99/Quizem/ef0da05924d4490564fb60d1ede07686588f355e/src/assets/svgs/undraw_mobile_login_re_9ntv.svg"
                 alt="404"
                 className="w-full h-full object-cover object-left-center"
               />

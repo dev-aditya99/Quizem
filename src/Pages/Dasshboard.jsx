@@ -182,7 +182,7 @@ const Dashboard = () => {
   ) : (
     <div className="h-[50vh] py-9 flex flex-col items-center justify-center gap-2 text-[1.2rem] text-gray-400 font-medium">
       <img
-        src="src\assets\svgs\undraw_empty_re_opql.svg"
+        src="https://raw.githubusercontent.com/dev-aditya99/Quizem/ef0da05924d4490564fb60d1ede07686588f355e/src/assets/svgs/undraw_empty_re_opql.svg"
         alt="404"
         className="my-5 w-full h-full object-contain"
       />
