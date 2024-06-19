@@ -6,20 +6,15 @@ import "react-toastify/dist/ReactToastify.css";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, onValue, update } from "firebase/database";
-import { useNavigate } from "react-router-dom";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCzcbQV9ls8mE4fQPbDuLnaMokQ-3caScg",
-  authDomain: "quiz-game-ece43.firebaseapp.com",
-  projectId: "quiz-game-ece43",
-  storageBucket: "quiz-game-ece43.appspot.com",
-  messagingSenderId: "242204011577",
-  appId: "1:242204011577:web:cfbfb224b7700ef74a71e8",
-  measurementId: "G-DBD5CVG720",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
