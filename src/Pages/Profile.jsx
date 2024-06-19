@@ -30,7 +30,7 @@ function Profile() {
     logout,
     holdUserPlayDataKeys,
   } = useContext(Context);
-  const navigator = useNavigate();
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showProfilePic, setShowProfilePic] = useState(false);
   const [showProfilePicUploader, setShowProfilePicUploader] = useState(false);
@@ -86,7 +86,7 @@ function Profile() {
     setIsLoader(false);
     let lsUser = localStorage.getItem("user");
     if (lsUser == null) {
-      navigator("/auth");
+      navigate("/auth");
     }
   }, [user]);
 
@@ -137,13 +137,13 @@ function Profile() {
       htmlBody.style.overflow = "hidden";
     } else {
       htmlBody.style.overflow = "";
-      navigator("/");
+      navigate("/");
     }
   };
 
   const cancelYesBtnHandler = () => {
     setIsAnyChange(false);
-    navigator("/");
+    navigate("/");
     htmlBody.style.overflow = "";
   };
 
@@ -289,7 +289,7 @@ function Profile() {
                 htmlBody.style.overflow = "";
                 setIsDeleting(false);
                 setDeleteAlertState(false);
-                navigator("/auth");
+                navigate("/auth");
                 logout();
                 location.reload();
               });
@@ -351,6 +351,24 @@ function Profile() {
     htmlBody.style.overflow = "";
   };
 
+  // handle file permission
+  const handleFilePermission = () => {
+    // Check for browser-specific permission messages
+    if (navigator.permissions) {
+      // Check for storage permission (not directly available, but handle it gracefully)
+      navigator.permissions
+        .query({ name: "persistent-storage" })
+        .then((result) => {
+          if (result.state === "denied") {
+            alert("Please allow storage access in your browser settings.");
+          }
+        })
+        .catch(() => {
+          // Permission API may not support this query, continue gracefully
+        });
+    }
+  };
+
   return (
     <div className="max-w-[1200px] mx-auto mt-10 sm:p-6 py-6 ">
       {/* user pic  */}
@@ -391,6 +409,7 @@ function Profile() {
               className="hidden"
               accept=".jpg, .png, .jpeg, .webp"
               onChange={handleImageChange}
+              onClick={handleFilePermission}
             />
           </button>
           {/* profile pic uploader screen */}
