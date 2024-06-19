@@ -389,7 +389,7 @@ function Profile() {
               name="profile_pic"
               id="profile_pic_id"
               className="hidden"
-              accept="image/*"
+              accept=".jpg, .png, .jpeg, .webp"
               onChange={handleImageChange}
             />
           </button>
